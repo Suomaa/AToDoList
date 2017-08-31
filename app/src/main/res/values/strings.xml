@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">AToDoList</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_add_task">Add a new Task</string>
+</resources>
