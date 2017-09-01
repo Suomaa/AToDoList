@@ -15,6 +15,7 @@ import android.view.MenuItem;
 import android.util.Log;
 import android.widget.EditText;
 import android.content.ContentValues;
+import android.widget.ListView;
 
 import fi.suomaafrontieroy.atodolist.db.TaskContract;
 import fi.suomaafrontieroy.atodolist.db.TaskDbHelper;
@@ -22,6 +23,7 @@ import fi.suomaafrontieroy.atodolist.db.TaskDbHelper;
 public class MainActivity extends AppCompatActivity {
     private static final String TAG = "MainActivity";
     private TaskDbHelper mHelper;
+    private ListView mTaskListView;
 
 
     @Override
@@ -30,7 +32,18 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
         mHelper = new TaskDbHelper(this);
+        mTaskListView = (ListView) findViewById(R.id.list_todo);
+
+        SQLiteDatabase db = mHelper.getReadableDatabase();
+        Cursor cursor = db.query(TaskContract.TaskEntry.TABLE, new String[]{TaskContract.TaskEntry._ID, TaskContract.TaskEntry.COL_TASK_TITLE}, null, null, null, null, null);
+        while(cursor.moveToNext()) {
+            int idx = cursor.getColumnIndex(TaskContract.TaskEntry.COL_TASK_TITLE);
+            Log.d(TAG, "Task: " + cursor.getString(idx));
+        }
+        cursor.close();
+        db.close();
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
