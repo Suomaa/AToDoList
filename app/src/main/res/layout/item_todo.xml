@@ -6,20 +6,23 @@
 
     <TextView
         android:id="@+id/task_title"
+        android:gravity="center"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
+        android:paddingLeft="16dp"
         android:text="Hello"
         android:textSize="20sp" />
 
-    <Button
+    <ImageView
         android:id="@+id/task_delete"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
-        android:text="Done"
+        android:paddingRight="8dp"
+        android:src="@drawable/ic_delete_forever_black_24dp"
         android:onClick="deleteTask"/>
 
 </RelativeLayout>
