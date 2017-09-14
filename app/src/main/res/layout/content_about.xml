@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="fi.suomaafrontieroy.atodolist.AboutActivity"
+    tools:showIn="@layout/activity_about">
+
+    <TextView
+        android:id="@+id/company_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/company_name"
+        android:textColor="@color/colorPrimary"
+        android:textSize="18sp"/>
+
+    <TextView
+        android:id="@+id/author"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/author"
+        android:textColor="@color/colorPrimary"
+        android:textSize="18sp"/>
+
+    <TextView
+        android:id="@+id/year"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/year"
+        android:textColor="@color/colorPrimary"
+        android:textSize="18sp"/>
+
+</LinearLayout>

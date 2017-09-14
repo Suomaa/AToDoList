@@ -19,6 +19,7 @@ import android.content.ContentValues;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.content.Intent;
 
 import java.util.ArrayList;
 
@@ -68,10 +69,9 @@ public class MainActivity extends AppCompatActivity {
         int id = item.getItemId();
 
         switch (id) {
-            case R.id.action_add_task:
-                addTask();
-                return true;
-            case R.id.action_settings:
+            case R.id.action_about:
+                Intent intent = new Intent(MainActivity.this, AboutActivity.class);
+                startActivityForResult(intent, 0);
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
