@@ -9,28 +9,18 @@
     tools:context="fi.suomaafrontieroy.atodolist.AboutActivity"
     tools:showIn="@layout/activity_about">
 
-    <TextView
-        android:id="@+id/company_name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/company_name"
-        android:textColor="@color/colorPrimary"
-        android:textSize="18sp"/>
-
-    <TextView
-        android:id="@+id/author"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/author"
-        android:textColor="@color/colorPrimary"
-        android:textSize="18sp"/>
-
-    <TextView
-        android:id="@+id/year"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/year"
-        android:textColor="@color/colorPrimary"
-        android:textSize="18sp"/>
+    <ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:padding="16dp">
+        <TextView
+            android:id="@+id/about_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorPrimary"
+            android:textSize="18sp"
+            android:text="@string/about_text" />
+    </ScrollView>
 
 </LinearLayout>
