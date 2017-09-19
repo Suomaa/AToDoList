@@ -69,12 +69,16 @@ public class MainActivity extends AppCompatActivity {
         int id = item.getItemId();
 
         switch (id) {
+            case R.id.action_add_task:
+                addTask();
+                return true;
+            case R.id.action_delete_all:
+                delAllTasks();
+                return true;
             case R.id.action_about:
                 Intent intent = new Intent(MainActivity.this, AboutActivity.class);
                 startActivityForResult(intent, 0);
                 return true;
-            case R.id.action_delete_all:
-                delAllTasks();
             default:
                 return super.onOptionsItemSelected(item);
         }
