@@ -110,10 +110,10 @@ public class MainActivity extends AppCompatActivity {
     private void addTask() {
         final EditText taskEditText = new EditText(this);
         AlertDialog dialog = new AlertDialog.Builder(this)
-                .setTitle("Add a new task")
-                .setMessage("What do you want to do next?")
+                .setTitle(R.string.action_add_new_task)
+                .setMessage(R.string.message_dialog_add)
                 .setView(taskEditText)
-                .setPositiveButton("Add", new DialogInterface.OnClickListener() {
+                .setPositiveButton(R.string.button_add, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         String task = String.valueOf(taskEditText.getText());
@@ -139,7 +139,7 @@ public class MainActivity extends AppCompatActivity {
 
                     }
                 })
-                .setNegativeButton("Cancel", null)
+                .setNegativeButton(R.string.button_cancel, null)
                 .create();
         dialog.show();
     }
@@ -156,9 +156,9 @@ public class MainActivity extends AppCompatActivity {
 
     private void delAllTasks() {
         AlertDialog dialog = new AlertDialog.Builder(this)
-                .setTitle("Confirm deletion")
-                .setMessage("All tasks will be delete")
-                .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                .setTitle(R.string.action_confirm_deletion)
+                .setMessage(R.string.message_dialog_confirm_deletion)
+                .setPositiveButton(R.string.button_ok, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         SQLiteDatabase db = mHelper.getWritableDatabase();
@@ -167,7 +167,7 @@ public class MainActivity extends AppCompatActivity {
                         updateUI();
                     }
                 })
-                .setNegativeButton("Cancel", null)
+                .setNegativeButton(R.string.button_cancel, null)
                 .create();
         dialog.show();
     }
