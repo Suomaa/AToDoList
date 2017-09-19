@@ -2,6 +2,7 @@
     <string name="app_name">AToDoList</string>
     <string name="action_about">About</string>
     <string name="action_add_task">Add a new Task</string>
+    <string name="action_delete_all">Delete all Task</string>
     <string name="empty_task">Task is empty!</string>
     <string name="title_activity_about">About</string>
     <string name="about_text">

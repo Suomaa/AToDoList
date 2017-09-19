@@ -73,6 +73,8 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent = new Intent(MainActivity.this, AboutActivity.class);
                 startActivityForResult(intent, 0);
                 return true;
+            case R.id.action_delete_all:
+                delAllTasks();
             default:
                 return super.onOptionsItemSelected(item);
         }
@@ -146,5 +148,23 @@ public class MainActivity extends AppCompatActivity {
         db.delete(TaskContract.TaskEntry.TABLE, TaskContract.TaskEntry.COL_TASK_TITLE + " =?", new String[]{task});
         db.close();
         updateUI();
+    }
+
+    private void delAllTasks() {
+        AlertDialog dialog = new AlertDialog.Builder(this)
+                .setTitle("Confirm deletion")
+                .setMessage("All tasks will be delete")
+                .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        SQLiteDatabase db = mHelper.getWritableDatabase();
+                        db.delete(TaskContract.TaskEntry.TABLE, null, null);
+                        db.close();
+                        updateUI();
+                    }
+                })
+                .setNegativeButton("Cancel", null)
+                .create();
+        dialog.show();
     }
 }
