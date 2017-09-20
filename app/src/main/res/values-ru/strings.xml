@@ -1,0 +1,20 @@
+<resources>
+    <string name="action_about">О приложении</string>
+    <string name="action_add_task">Добавить задачу</string>
+    <string name="action_add_new_task">Добавить новую задачу</string>
+    <string name="button_add">Добавить</string>
+    <string name="button_cancel">Отмена</string>
+    <string name="button_ok">OK</string>
+    <string name="action_confirm_deletion">Подтверждение удаления</string>
+    <string name="message_dialog_add">Что вы хотите сделать?</string>
+    <string name="message_dialog_confirm_deletion">Все задачи будут удалены!</string>
+    <string name="action_delete_all">Очистить список</string>
+    <string name="empty_task">Задача пустая!</string>
+    <string name="title_activity_about">О приложении</string>
+    <string name="about_text">
+        <b>Приложение:</b> AToDoList \n\n
+        <b>Версия:</b> 0.5 \n\n
+        <b>Организация:</b> SuomaaFrontier OY \n\n
+        <b>Авторские права © Александр Антомонов 2017</b>
+    </string>
+</resources>

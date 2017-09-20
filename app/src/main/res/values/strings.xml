@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">AToDoList</string>
+    <string name="app_name" translatable="false">AToDoList</string>
     <string name="action_about">About</string>
     <string name="action_add_task">Add new</string>
     <string name="action_add_new_task">Add a new task</string>
@@ -8,7 +8,7 @@
     <string name="button_ok">OK</string>
     <string name="action_confirm_deletion">Confirm deletion</string>
     <string name="message_dialog_add">What do you want to do next?</string>
-    <string name="message_dialog_confirm_deletion">All tasks will be deleted</string>
+    <string name="message_dialog_confirm_deletion">All tasks will be deleted!</string>
     <string name="action_delete_all">Delete all</string>
     <string name="empty_task">Task is empty!</string>
     <string name="title_activity_about">About</string>
