@@ -13,10 +13,10 @@ public class AboutActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_about);
-        getVersionInfo();
+        getInfo();
     }
 
-    private void getVersionInfo() {
+    private void getInfo() {
         String version = "";
         try {
             PackageInfo packageInfo = getPackageManager().getPackageInfo(getPackageName(), 0);
@@ -25,8 +25,8 @@ public class AboutActivity extends AppCompatActivity {
             e.printStackTrace();
         }
 
-        TextView textViewVersionInfo = (TextView) findViewById(R.id.version);
-        textViewVersionInfo.setText(String.format("Version: %s \n", version));
+        TextView textViewVersionInfo = (TextView) findViewById(R.id.app_version);
+        textViewVersionInfo.setText(String.format("Version: %s", version));
     }
 
 }
