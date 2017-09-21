@@ -1,19 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.design.widget.CoordinatorLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="fi.suomaafrontieroy.atodolist.AboutActivity">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              tools:context="fi.suomaafrontieroy.atodolist.AboutActivity"
+              android:id="@+id/aboutLinearLayout"
+              android:orientation="vertical">
 
-    <android.support.design.widget.AppBarLayout
-        android:layout_width="match_parent"
+    <ImageView
+        android:id="@+id/icon_app"
+        android:layout_width="wrap_content"
+        android:layout_height="250dp"
+        android:paddingTop="50dp"
+        android:layout_gravity="center_horizontal"
+        android:src="@drawable/app_logo_white512" />
+
+    <TextView
+        android:id="@+id/version"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:theme="@style/AppTheme.AppBarOverlay">
+        android:layout_gravity="center_horizontal"
+        android:textColor="@color/colorPrimary"
+        android:textSize="16sp"
+        android:text="test"/>
 
-    </android.support.design.widget.AppBarLayout>
+    <ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:padding="16dp">
+        <TextView
+            android:id="@+id/about_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorPrimary"
+            android:textSize="16sp"
+            android:text="@string/about_text" />
 
-    <include layout="@layout/content_about" />
+    </ScrollView>
+</LinearLayout>
 
-</android.support.design.widget.CoordinatorLayout>

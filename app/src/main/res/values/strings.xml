@@ -14,7 +14,6 @@
     <string name="title_activity_about">About</string>
     <string name="about_text">
         <b>Application:</b> AToDoList \n\n
-        <b>Version:</b> 0.5 \n\n
         <b>Company:</b> SuomaaFrontier OY \n\n
         <b>Copyright © Aleksandr Antomonov 2017</b>
     </string>
