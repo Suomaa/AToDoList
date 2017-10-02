@@ -13,5 +13,5 @@
     <string name="empty_task">Task is empty!</string>
     <string name="title_activity_about">About</string>
     <string name="about_app_name">Application: <b>AToDoList</b></string>
-    <string name="about_copyright">Company: <b>SuomaaFrontier OY</b>\n\nCopyright <b>© Aleksandr Antomonov 2017</b></string>
+    <string name="about_copyright">Company: <b>SuomaaFrontier Oy</b>\n\nCopyright <b>© Aleksandr Antomonov 2017</b></string>
 </resources>

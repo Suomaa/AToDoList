@@ -12,5 +12,5 @@
     <string name="empty_task">Задача пустая!</string>
     <string name="title_activity_about">О приложении</string>
     <string name="about_app_name">Приложение: <b>AToDoList</b></string>
-    <string name="about_copyright">Организация: <b>SuomaaFrontier OY</b>\n\nАвторские права <b>© Александр Антомонов 2017</b></string>
+    <string name="about_copyright">Организация: <b>SuomaaFrontier Oy</b>\n\nАвторские права <b>© Александр Антомонов 2017</b></string>
 </resources>
