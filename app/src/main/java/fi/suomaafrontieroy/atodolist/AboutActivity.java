@@ -20,13 +20,14 @@ public class AboutActivity extends AppCompatActivity {
         String version = "";
         try {
             PackageInfo packageInfo = getPackageManager().getPackageInfo(getPackageName(), 0);
-            version= packageInfo.versionName;
+            version = packageInfo.versionName;
         } catch (PackageManager.NameNotFoundException e) {
             e.printStackTrace();
         }
 
+        String result = getResources().getString(R.string.version_app) + " " + version;
         TextView textViewVersionInfo = (TextView) findViewById(R.id.app_version);
-        textViewVersionInfo.setText(String.format("Version: %s", version));
+        textViewVersionInfo.setText(result);
     }
 
 }

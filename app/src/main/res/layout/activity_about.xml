@@ -31,7 +31,7 @@
         android:paddingStart="8dp"
         android:paddingBottom="16dp"
         android:textColor="@color/colorPrimary"
-        android:textSize="14sp"
+        android:textSize="15sp"
         android:text="@string/about_app_name"/>
 
     <TextView
@@ -41,7 +41,7 @@
         android:paddingStart="8dp"
         android:paddingBottom="16dp"
         android:textColor="@color/colorPrimary"
-        android:textSize="14sp"/>
+        android:textSize="15sp"/>
 
     <TextView
         android:id="@+id/about_copyright"
@@ -50,7 +50,7 @@
         android:paddingStart="8dp"
         android:paddingBottom="16dp"
         android:textColor="@color/colorPrimary"
-        android:textSize="14sp"
+        android:textSize="15sp"
         android:text="@string/about_copyright"/>
         </LinearLayout>
     </ScrollView>
