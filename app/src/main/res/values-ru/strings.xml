@@ -13,5 +13,5 @@
     <string name="title_activity_about">О приложении</string>
     <string name="about_app_name">Приложение: <b>AToDoList</b></string>
     <string name="version_app">Версия: </string>
-    <string name="about_copyright">Организация: <b>SuomaaFrontier Oy</b>\n\n<b>© Александр Антомонов 2017</b></string>
+    <string name="about_copyright">Организация: <b>SuomaaFrontier Oy</b>\n\n<b>© Александр Антомонов 2018</b></string>
 </resources>
