@@ -147,17 +147,28 @@ public class MainActivity extends AppCompatActivity {
     public void deleteTask(View view) {
         View parent = (View) view.getParent();
         TextView taskTextView = (TextView) parent.findViewById(R.id.task_title);
-        String task = String.valueOf(taskTextView.getText());
-        SQLiteDatabase db = mHelper.getWritableDatabase();
-        db.delete(TaskContract.TaskEntry.TABLE, TaskContract.TaskEntry.COL_TASK_TITLE + " =?", new String[]{task});
-        db.close();
-        updateUI();
+        final String task = String.valueOf(taskTextView.getText());
+        AlertDialog dialog = new AlertDialog.Builder(this)
+                .setTitle(R.string.action_confirm_deletion)
+                .setMessage(R.string.message_dialog_confirm_deletion)
+                .setPositiveButton(R.string.button_ok, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        SQLiteDatabase db = mHelper.getWritableDatabase();
+                        db.delete(TaskContract.TaskEntry.TABLE, TaskContract.TaskEntry.COL_TASK_TITLE + " =?", new String[]{task});
+                        db.close();
+                        updateUI();
+                    }
+                })
+                .setNegativeButton(R.string.button_cancel, null)
+                .create();
+        dialog.show();
     }
 
     private void delAllTasks() {
         AlertDialog dialog = new AlertDialog.Builder(this)
                 .setTitle(R.string.action_confirm_deletion)
-                .setMessage(R.string.message_dialog_confirm_deletion)
+                .setMessage(R.string.message_dialog_confirm_deletion_all)
                 .setPositiveButton(R.string.button_ok, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {

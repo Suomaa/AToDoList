@@ -7,11 +7,12 @@
     <string name="button_ok">OK</string>
     <string name="action_confirm_deletion">Подтверждение удаления</string>
     <string name="message_dialog_add">Что вы хотите сделать?</string>
-    <string name="message_dialog_confirm_deletion">Все задачи будут удалены!</string>
+    <string name="message_dialog_confirm_deletion">Задача будет удалена!</string>
+    <string name="message_dialog_confirm_deletion_all">Все задачи будут удалены!</string>
     <string name="action_delete_all">Очистить список</string>
     <string name="empty_task">Задача пустая!</string>
     <string name="title_activity_about">О приложении</string>
     <string name="about_app_name">Приложение: <b>AToDoList</b></string>
     <string name="version_app">Версия: </string>
-    <string name="about_copyright">Организация: <b>SuomaaFrontier Oy</b>\n\n<b>© Александр Антомонов 2018</b></string>
+    <string name="about_copyright">Организация: <b>SuomaaFrontier Oy</b>\n\nРазработчик: <b>© Александр Антомонов 2018</b></string>
 </resources>
